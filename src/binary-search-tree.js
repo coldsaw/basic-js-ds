@@ -97,12 +97,12 @@ class BinarySearchTree {
           node = node.left;
           return node;
         }
-        let minRight = node.right;
-        while (minRight.left) {
-          minRight = minRight.left;
+        let maxLeft = node.left;
+        while (maxLeft.right) {
+          maxLeft = maxLeft.right;
         }
-        node.data = minRight.data;
-        node.right = removeNode(node.right, minRight.data);
+        node.data = maxLeft.data;
+        node.right = removeNode(node.right, maxLeft.data);
 
         return node;
       }

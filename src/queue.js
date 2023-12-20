@@ -17,7 +17,6 @@ class Queue {
   list;
 
   getUnderlyingList() {
-    console.debug(this.list);
     return this.list;
   }
 
