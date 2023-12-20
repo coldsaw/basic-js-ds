@@ -102,7 +102,7 @@ class BinarySearchTree {
           maxLeft = maxLeft.right;
         }
         node.data = maxLeft.data;
-        node.right = removeNode(node.right, maxLeft.data);
+        node.left = removeNode(node.left, maxLeft.data);
 
         return node;
       }
